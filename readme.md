@@ -4,6 +4,16 @@
 
 * `docker ps` - lists all running containers
 
+Build the image: 
+
+`docker build -t 8ctopotamus/docker-express-demo:1.0 .` 
+
+The `-t` (tag) flag names the container. Give it a namespaced tag.
+
+Run it locally
+
+`docker run <image ID>`
+
 ### Test the basic Express server
 
 `npm start`
