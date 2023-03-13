@@ -1,0 +1,24 @@
+{
+  "name": "docker-demo",
+  "version": "1.0.0",
+  "description": "[Fireship Youtube Video - Learn Docker in 7 Easy Steps - Full Beginner's Tutorial](https://www.youtube.com/watch?v=gAkwW2tuIqE)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "npx nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8ctopotamus/docker-nodejs-basic-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8ctopotamus/docker-nodejs-basic-demo/issues"
+  },
+  "homepage": "https://github.com/8ctopotamus/docker-nodejs-basic-demo#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
