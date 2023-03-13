@@ -20,7 +20,13 @@ The `-t` (tag) flag names the container. Give it a namespaced tag.
 
 **Run it locally**
 
-`docker run <image ID>`
+`docker run <image ID>` 
+
+⚠ Important! Our image runs and our server starts listening, but if you try to make a request to the server, it fails (local:container).
+
+We need to forward a port to our Docker container from our local machine:
+
+`docker run -p 5000:3001 <image ID>`
 
 **Push to DockerHub**
 
@@ -28,8 +34,10 @@ The `-t` (tag) flag names the container. Give it a namespaced tag.
 
 `docker push 8ctopotamus/docker-express-demo:1.0`
 
+---
+
 **Locally test the Express server running on the Docker image **
 
-`docker run <image ID>`
+`docker run -p 5000:3001 <image ID>`
 
-`curl --header "Content-Type: application/json" --request POST --data '{"username":"xyz","password":"xyz"}' http://localhost:3001`
+`curl --header "Content-Type: application/json" --request POST --data '{"username":"xyz","password":"xyz"}' http://localhost:5000`
